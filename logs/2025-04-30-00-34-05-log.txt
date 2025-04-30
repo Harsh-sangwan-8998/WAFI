@@ -1,0 +1,31 @@
+2025-04-30 00:34:05,402 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-04-30 00:34:05,403 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 00:34:05,442 - INFO - 127.0.0.1 - - [30/Apr/2025 00:34:05] "GET / HTTP/1.1" 200 -
+2025-04-30 00:34:05,570 - INFO - 127.0.0.1 - - [30/Apr/2025 00:34:05] "[36mGET /static/css/welcome.css HTTP/1.1[0m" 304 -
+2025-04-30 00:34:05,578 - INFO - 127.0.0.1 - - [30/Apr/2025 00:34:05] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-04-30 00:34:05,617 - INFO - 127.0.0.1 - - [30/Apr/2025 00:34:05] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-04-30 00:34:05,883 - INFO - 127.0.0.1 - - [30/Apr/2025 00:34:05] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-04-30 00:34:05,886 - INFO - 127.0.0.1 - - [30/Apr/2025 00:34:05] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-04-30 00:34:09,994 - INFO - \U0001f50d Received scan request for: http://testfire.net (Max Links: 50)
+2025-04-30 00:34:09,995 - INFO - \U0001f30d Starting crawl for: http://testfire.net (Max Pages: 50)
+2025-04-30 00:34:09,996 - INFO - 127.0.0.1 - - [30/Apr/2025 00:34:09] "GET /progress HTTP/1.1" 200 -
+2025-04-30 00:34:12,073 - INFO - \U0001f50d Received scan request for: http://testfire.net (Max Links: 50)
+2025-04-30 00:34:12,073 - INFO - \U0001f30d Starting crawl for: http://testfire.net (Max Pages: 50)
+2025-04-30 00:34:12,074 - INFO - 127.0.0.1 - - [30/Apr/2025 00:34:12] "GET /progress HTTP/1.1" 200 -
+2025-04-30 00:34:12,618 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-04-30 00:34:13,828 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-04-30 00:34:14,947 - INFO - 127.0.0.1 - - [30/Apr/2025 00:34:14] "GET / HTTP/1.1" 200 -
+2025-04-30 00:34:16,901 - INFO - 127.0.0.1 - - [30/Apr/2025 00:34:16] "[33mGET /static/scan_report.pdf HTTP/1.1[0m" 404 -
+2025-04-30 00:34:16,906 - INFO - 127.0.0.1 - - [30/Apr/2025 00:34:16] "[36mGET /static/css/welcome.css HTTP/1.1[0m" 304 -
+2025-04-30 00:34:21,157 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-04-30 00:34:21,157 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-04-30 00:34:21,743 - WARNING - \u26a0\ufe0f SQLi detected in form at http://testfire.net/search.jsp
+2025-04-30 00:34:21,744 - WARNING - \u26a0\ufe0f CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-04-30 00:34:21,744 - INFO - \U0001f4c8 Progress: 1/50 pages scanned
+2025-04-30 00:34:22,324 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-04-30 00:34:22,324 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-04-30 00:34:22,861 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-04-30 00:34:22,892 - WARNING - \u26a0\ufe0f SQLi detected in form at http://testfire.net/search.jsp
+2025-04-30 00:34:22,893 - WARNING - \u26a0\ufe0f CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-04-30 00:34:22,893 - INFO - \U0001f4c8 Progress: 1/50 pages scanned

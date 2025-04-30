@@ -1,0 +1,15 @@
+2025-04-30 15:12:56,905 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-04-30 15:12:56,905 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-30 15:12:57,014 - INFO - 127.0.0.1 - - [30/Apr/2025 15:12:57] "GET / HTTP/1.1" 200 -
+2025-04-30 15:12:57,354 - INFO - 127.0.0.1 - - [30/Apr/2025 15:12:57] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-04-30 15:12:57,363 - INFO - 127.0.0.1 - - [30/Apr/2025 15:12:57] "[36mGET /static/css/welcome.css HTTP/1.1[0m" 304 -
+2025-04-30 15:12:57,725 - INFO - 127.0.0.1 - - [30/Apr/2025 15:12:57] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-04-30 15:12:58,014 - INFO - 127.0.0.1 - - [30/Apr/2025 15:12:58] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-04-30 15:13:26,747 - INFO - \U0001f50d Received scan request for: http://testfire.net (Max Links: 10)
+2025-04-30 15:13:26,748 - INFO - \U0001f30d Starting crawl for: http://testfire.net (Max Pages: 10)
+2025-04-30 15:13:26,750 - INFO - 127.0.0.1 - - [30/Apr/2025 15:13:26] "GET /progress HTTP/1.1" 200 -
+2025-04-30 15:13:27,316 - WARNING - \u26a0 Missing security headers at http://testfire.net: Content-Security-Policy, X-Frame-Options, X-XSS-Protection, Strict-Transport-Security, Referrer-Policy, Permissions-Policy
+2025-04-30 15:13:27,327 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-04-30 15:13:35,572 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-04-30 15:13:35,573 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.

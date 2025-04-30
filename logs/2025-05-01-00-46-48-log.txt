@@ -1,0 +1,311 @@
+2025-05-01 00:46:49,405 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+2025-05-01 00:46:49,405 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-01 00:46:50,027 - INFO - 127.0.0.1 - - [01/May/2025 00:46:50] "GET / HTTP/1.1" 200 -
+2025-05-01 00:46:50,571 - INFO - 127.0.0.1 - - [01/May/2025 00:46:50] "[36mGET /static/css/welcome.css HTTP/1.1[0m" 304 -
+2025-05-01 00:46:50,854 - INFO - 127.0.0.1 - - [01/May/2025 00:46:50] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-01 00:46:50,999 - INFO - 127.0.0.1 - - [01/May/2025 00:46:50] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-01 00:46:51,523 - INFO - 127.0.0.1 - - [01/May/2025 00:46:51] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-01 00:46:51,606 - INFO - 127.0.0.1 - - [01/May/2025 00:46:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-01 00:46:55,830 - INFO - \U0001f50d Received scan request for: http://testfire.net (Max Links: 5)
+2025-05-01 00:46:55,831 - INFO - \U0001f30d Starting crawl for: http://testfire.net (Max Pages: 5)
+2025-05-01 00:46:55,839 - INFO - 127.0.0.1 - - [01/May/2025 00:46:55] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:46:56,432 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-05-01 00:47:07,132 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-05-01 00:47:07,133 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-05-01 00:47:07,709 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/search.jsp
+2025-05-01 00:47:07,709 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-05-01 00:47:07,709 - INFO - \U0001f4c8 Progress: 1/5 pages scanned
+2025-05-01 00:47:08,787 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-05-01 00:47:19,621 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-05-01 00:47:19,621 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-05-01 00:47:20,144 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/search.jsp
+2025-05-01 00:47:20,145 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-05-01 00:47:20,145 - INFO - \U0001f4c8 Progress: 2/5 pages scanned
+2025-05-01 00:47:21,256 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-05-01 00:47:30,189 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-05-01 00:47:30,189 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-05-01 00:47:30,756 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/search.jsp
+2025-05-01 00:47:30,756 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-05-01 00:47:30,756 - INFO - \U0001f50e Scanning http://testfire.net/doLogin for SQL Injection vulnerabilities...
+2025-05-01 00:47:44,116 - INFO - \U0001f50e Scanning http://testfire.net/doLogin for XSS vulnerabilities...
+2025-05-01 00:47:44,116 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/doLogin.
+2025-05-01 00:47:45,026 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/doLogin
+2025-05-01 00:47:45,026 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/doLogin - CSRF protection missing (no CSRF token found in GET form).
+2025-05-01 00:47:45,027 - INFO - \U0001f4c8 Progress: 3/5 pages scanned
+2025-05-01 00:47:46,101 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-05-01 00:47:54,773 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-05-01 00:47:54,773 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-05-01 00:47:55,373 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/search.jsp
+2025-05-01 00:47:55,373 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-05-01 00:47:55,373 - INFO - \U0001f4c8 Progress: 4/5 pages scanned
+2025-05-01 00:47:56,473 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-05-01 00:48:05,269 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-05-01 00:48:05,270 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-05-01 00:48:05,975 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/search.jsp
+2025-05-01 00:48:05,975 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-05-01 00:48:05,975 - INFO - \U0001f50e Scanning http://testfire.net/sendFeedback for SQL Injection vulnerabilities...
+2025-05-01 00:48:14,863 - INFO - \U0001f50e Scanning http://testfire.net/sendFeedback for XSS vulnerabilities...
+2025-05-01 00:48:14,863 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/sendFeedback.
+2025-05-01 00:48:15,445 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/sendFeedback
+2025-05-01 00:48:15,446 - INFO - \U0001f4c8 Progress: 5/5 pages scanned
+2025-05-01 00:48:15,947 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside_contact.htm for SQL Injection vulnerabilities...
+2025-05-01 00:48:18,539 - INFO - 127.0.0.1 - - [01/May/2025 00:48:18] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:21,544 - INFO - 127.0.0.1 - - [01/May/2025 00:48:21] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:24,548 - INFO - 127.0.0.1 - - [01/May/2025 00:48:24] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:25,300 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside_contact.htm for XSS vulnerabilities...
+2025-05-01 00:48:25,300 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=inside_contact.htm.
+2025-05-01 00:48:25,300 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=inside_contact.htm
+2025-05-01 00:48:25,300 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal.htm for SQL Injection vulnerabilities...
+2025-05-01 00:48:27,555 - INFO - 127.0.0.1 - - [01/May/2025 00:48:27] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:30,559 - INFO - 127.0.0.1 - - [01/May/2025 00:48:30] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:33,565 - INFO - 127.0.0.1 - - [01/May/2025 00:48:33] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:34,088 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal.htm for XSS vulnerabilities...
+2025-05-01 00:48:34,088 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=personal.htm.
+2025-05-01 00:48:34,088 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=personal.htm
+2025-05-01 00:48:34,088 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business.htm for SQL Injection vulnerabilities...
+2025-05-01 00:48:36,568 - INFO - 127.0.0.1 - - [01/May/2025 00:48:36] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:39,572 - INFO - 127.0.0.1 - - [01/May/2025 00:48:39] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:42,578 - INFO - 127.0.0.1 - - [01/May/2025 00:48:42] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:42,822 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business.htm for XSS vulnerabilities...
+2025-05-01 00:48:42,822 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=business.htm.
+2025-05-01 00:48:42,823 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=business.htm
+2025-05-01 00:48:42,823 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside.htm for SQL Injection vulnerabilities...
+2025-05-01 00:48:45,582 - INFO - 127.0.0.1 - - [01/May/2025 00:48:45] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:48,590 - INFO - 127.0.0.1 - - [01/May/2025 00:48:48] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:51,597 - INFO - 127.0.0.1 - - [01/May/2025 00:48:51] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:54,603 - INFO - 127.0.0.1 - - [01/May/2025 00:48:54] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:48:54,710 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside.htm for XSS vulnerabilities...
+2025-05-01 00:48:54,710 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=inside.htm.
+2025-05-01 00:48:54,710 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=inside.htm
+2025-05-01 00:48:54,711 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_deposit.htm for SQL Injection vulnerabilities...
+2025-05-01 00:48:57,607 - INFO - 127.0.0.1 - - [01/May/2025 00:48:57] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:00,612 - INFO - 127.0.0.1 - - [01/May/2025 00:49:00] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:03,616 - INFO - 127.0.0.1 - - [01/May/2025 00:49:03] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:06,622 - INFO - 127.0.0.1 - - [01/May/2025 00:49:06] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:07,068 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_deposit.htm for XSS vulnerabilities...
+2025-05-01 00:49:07,068 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=personal_deposit.htm.
+2025-05-01 00:49:07,068 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=personal_deposit.htm
+2025-05-01 00:49:07,068 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_checking.htm for SQL Injection vulnerabilities...
+2025-05-01 00:49:09,626 - INFO - 127.0.0.1 - - [01/May/2025 00:49:09] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:12,632 - INFO - 127.0.0.1 - - [01/May/2025 00:49:12] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:15,604 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_checking.htm for XSS vulnerabilities...
+2025-05-01 00:49:15,604 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=personal_checking.htm.
+2025-05-01 00:49:15,605 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=personal_checking.htm
+2025-05-01 00:49:15,605 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_loans.htm for SQL Injection vulnerabilities...
+2025-05-01 00:49:15,635 - INFO - 127.0.0.1 - - [01/May/2025 00:49:15] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:18,641 - INFO - 127.0.0.1 - - [01/May/2025 00:49:18] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:21,645 - INFO - 127.0.0.1 - - [01/May/2025 00:49:21] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:24,651 - INFO - 127.0.0.1 - - [01/May/2025 00:49:24] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:26,318 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_loans.htm for XSS vulnerabilities...
+2025-05-01 00:49:26,318 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=personal_loans.htm.
+2025-05-01 00:49:26,318 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=personal_loans.htm
+2025-05-01 00:49:26,318 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_cards.htm for SQL Injection vulnerabilities...
+2025-05-01 00:49:27,658 - INFO - 127.0.0.1 - - [01/May/2025 00:49:27] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:30,663 - INFO - 127.0.0.1 - - [01/May/2025 00:49:30] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:33,668 - INFO - 127.0.0.1 - - [01/May/2025 00:49:33] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:34,948 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_cards.htm for XSS vulnerabilities...
+2025-05-01 00:49:34,948 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=personal_cards.htm.
+2025-05-01 00:49:34,948 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=personal_cards.htm
+2025-05-01 00:49:34,949 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_investments.htm for SQL Injection vulnerabilities...
+2025-05-01 00:49:36,673 - INFO - 127.0.0.1 - - [01/May/2025 00:49:36] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:39,678 - INFO - 127.0.0.1 - - [01/May/2025 00:49:39] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:42,683 - INFO - 127.0.0.1 - - [01/May/2025 00:49:42] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:43,194 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_investments.htm for XSS vulnerabilities...
+2025-05-01 00:49:43,195 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=personal_investments.htm.
+2025-05-01 00:49:43,195 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=personal_investments.htm
+2025-05-01 00:49:43,195 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_other.htm for SQL Injection vulnerabilities...
+2025-05-01 00:49:45,688 - INFO - 127.0.0.1 - - [01/May/2025 00:49:45] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:48,694 - INFO - 127.0.0.1 - - [01/May/2025 00:49:48] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:51,699 - INFO - 127.0.0.1 - - [01/May/2025 00:49:51] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:51,750 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_other.htm for XSS vulnerabilities...
+2025-05-01 00:49:51,751 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=personal_other.htm.
+2025-05-01 00:49:51,751 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=personal_other.htm
+2025-05-01 00:49:51,751 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business_deposit.htm for SQL Injection vulnerabilities...
+2025-05-01 00:49:54,704 - INFO - 127.0.0.1 - - [01/May/2025 00:49:54] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:49:57,708 - INFO - 127.0.0.1 - - [01/May/2025 00:49:57] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:00,714 - INFO - 127.0.0.1 - - [01/May/2025 00:50:00] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:00,798 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business_deposit.htm for XSS vulnerabilities...
+2025-05-01 00:50:00,798 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=business_deposit.htm.
+2025-05-01 00:50:00,798 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=business_deposit.htm
+2025-05-01 00:50:00,799 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business_lending.htm for SQL Injection vulnerabilities...
+2025-05-01 00:50:03,720 - INFO - 127.0.0.1 - - [01/May/2025 00:50:03] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:06,725 - INFO - 127.0.0.1 - - [01/May/2025 00:50:06] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:09,614 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business_lending.htm for XSS vulnerabilities...
+2025-05-01 00:50:09,614 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=business_lending.htm.
+2025-05-01 00:50:09,614 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=business_lending.htm
+2025-05-01 00:50:09,614 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business_cards.htm for SQL Injection vulnerabilities...
+2025-05-01 00:50:09,732 - INFO - 127.0.0.1 - - [01/May/2025 00:50:09] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:12,735 - INFO - 127.0.0.1 - - [01/May/2025 00:50:12] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:15,742 - INFO - 127.0.0.1 - - [01/May/2025 00:50:15] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:18,384 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business_cards.htm for XSS vulnerabilities...
+2025-05-01 00:50:18,384 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=business_cards.htm.
+2025-05-01 00:50:18,384 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=business_cards.htm
+2025-05-01 00:50:18,384 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business_insurance.htm for SQL Injection vulnerabilities...
+2025-05-01 00:50:18,750 - INFO - 127.0.0.1 - - [01/May/2025 00:50:18] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:21,757 - INFO - 127.0.0.1 - - [01/May/2025 00:50:21] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:24,762 - INFO - 127.0.0.1 - - [01/May/2025 00:50:24] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:27,424 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business_insurance.htm for XSS vulnerabilities...
+2025-05-01 00:50:27,424 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=business_insurance.htm.
+2025-05-01 00:50:27,424 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=business_insurance.htm
+2025-05-01 00:50:27,425 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business_retirement.htm for SQL Injection vulnerabilities...
+2025-05-01 00:50:27,767 - INFO - 127.0.0.1 - - [01/May/2025 00:50:27] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:30,771 - INFO - 127.0.0.1 - - [01/May/2025 00:50:30] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:33,776 - INFO - 127.0.0.1 - - [01/May/2025 00:50:33] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:36,194 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business_retirement.htm for XSS vulnerabilities...
+2025-05-01 00:50:36,195 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=business_retirement.htm.
+2025-05-01 00:50:36,195 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=business_retirement.htm
+2025-05-01 00:50:36,195 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business_other.htm for SQL Injection vulnerabilities...
+2025-05-01 00:50:36,779 - INFO - 127.0.0.1 - - [01/May/2025 00:50:36] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:39,784 - INFO - 127.0.0.1 - - [01/May/2025 00:50:39] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:42,790 - INFO - 127.0.0.1 - - [01/May/2025 00:50:42] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:45,110 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business_other.htm for XSS vulnerabilities...
+2025-05-01 00:50:45,110 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=business_other.htm.
+2025-05-01 00:50:45,110 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=business_other.htm
+2025-05-01 00:50:45,110 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside_about.htm for SQL Injection vulnerabilities...
+2025-05-01 00:50:45,797 - INFO - 127.0.0.1 - - [01/May/2025 00:50:45] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:48,802 - INFO - 127.0.0.1 - - [01/May/2025 00:50:48] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:51,809 - INFO - 127.0.0.1 - - [01/May/2025 00:50:51] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:54,267 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside_about.htm for XSS vulnerabilities...
+2025-05-01 00:50:54,268 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=inside_about.htm.
+2025-05-01 00:50:54,268 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=inside_about.htm
+2025-05-01 00:50:54,268 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside_investor.htm for SQL Injection vulnerabilities...
+2025-05-01 00:50:54,814 - INFO - 127.0.0.1 - - [01/May/2025 00:50:54] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:50:57,818 - INFO - 127.0.0.1 - - [01/May/2025 00:50:57] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:00,824 - INFO - 127.0.0.1 - - [01/May/2025 00:51:00] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:02,746 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside_investor.htm for XSS vulnerabilities...
+2025-05-01 00:51:02,747 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=inside_investor.htm.
+2025-05-01 00:51:02,747 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=inside_investor.htm
+2025-05-01 00:51:02,747 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside_press.htm for SQL Injection vulnerabilities...
+2025-05-01 00:51:03,829 - INFO - 127.0.0.1 - - [01/May/2025 00:51:03] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:06,833 - INFO - 127.0.0.1 - - [01/May/2025 00:51:06] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:09,839 - INFO - 127.0.0.1 - - [01/May/2025 00:51:09] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:12,844 - INFO - 127.0.0.1 - - [01/May/2025 00:51:12] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:13,133 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside_press.htm for XSS vulnerabilities...
+2025-05-01 00:51:13,133 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=inside_press.htm.
+2025-05-01 00:51:13,133 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=inside_press.htm
+2025-05-01 00:51:13,133 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside_careers.htm for SQL Injection vulnerabilities...
+2025-05-01 00:51:15,849 - INFO - 127.0.0.1 - - [01/May/2025 00:51:15] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:18,853 - INFO - 127.0.0.1 - - [01/May/2025 00:51:18] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:21,687 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside_careers.htm for XSS vulnerabilities...
+2025-05-01 00:51:21,687 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=inside_careers.htm.
+2025-05-01 00:51:21,687 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=inside_careers.htm
+2025-05-01 00:51:21,687 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_savings.htm for SQL Injection vulnerabilities...
+2025-05-01 00:51:21,856 - INFO - 127.0.0.1 - - [01/May/2025 00:51:21] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:24,861 - INFO - 127.0.0.1 - - [01/May/2025 00:51:24] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:27,867 - INFO - 127.0.0.1 - - [01/May/2025 00:51:27] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:30,403 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_savings.htm for XSS vulnerabilities...
+2025-05-01 00:51:30,403 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=personal_savings.htm.
+2025-05-01 00:51:30,403 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=personal_savings.htm
+2025-05-01 00:51:30,403 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=privacy.htm for SQL Injection vulnerabilities...
+2025-05-01 00:51:30,872 - INFO - 127.0.0.1 - - [01/May/2025 00:51:30] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:33,876 - INFO - 127.0.0.1 - - [01/May/2025 00:51:33] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:36,881 - INFO - 127.0.0.1 - - [01/May/2025 00:51:36] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:38,760 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=privacy.htm for XSS vulnerabilities...
+2025-05-01 00:51:38,760 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=privacy.htm.
+2025-05-01 00:51:38,761 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=privacy.htm
+2025-05-01 00:51:38,761 - INFO - \U0001f50e Scanning http://testfire.net/default.jsp?content=security.htm for SQL Injection vulnerabilities...
+2025-05-01 00:51:39,887 - INFO - 127.0.0.1 - - [01/May/2025 00:51:39] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:42,895 - INFO - 127.0.0.1 - - [01/May/2025 00:51:42] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:45,902 - INFO - 127.0.0.1 - - [01/May/2025 00:51:45] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:48,907 - INFO - 127.0.0.1 - - [01/May/2025 00:51:48] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:51,912 - INFO - 127.0.0.1 - - [01/May/2025 00:51:51] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:52,327 - WARNING - \u26a0\ufe0f Time-based SQL Injection detected at http://testfire.net/default.jsp?content=security.htm?id=1' OR '1'='1' /* with payload: 1' OR '1'='1' /*
+2025-05-01 00:51:52,997 - INFO - \U0001f50e Scanning http://testfire.net/default.jsp?content=security.htm for XSS vulnerabilities...
+2025-05-01 00:51:52,998 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/default.jsp?content=security.htm.
+2025-05-01 00:51:52,998 - WARNING - \u26a0 SQLi detected at http://testfire.net/default.jsp?content=security.htm
+2025-05-01 00:51:52,998 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=security.htm for SQL Injection vulnerabilities...
+2025-05-01 00:51:54,918 - INFO - 127.0.0.1 - - [01/May/2025 00:51:54] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:51:57,924 - INFO - 127.0.0.1 - - [01/May/2025 00:51:57] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:52:00,931 - INFO - 127.0.0.1 - - [01/May/2025 00:52:00] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:52:03,937 - INFO - 127.0.0.1 - - [01/May/2025 00:52:03] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:52:05,426 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=security.htm for XSS vulnerabilities...
+2025-05-01 00:52:05,427 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=security.htm.
+2025-05-01 00:52:05,427 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=security.htm
+2025-05-01 00:52:05,427 - INFO - \U0001f50e Scanning http://testfire.net/disclaimer.htm?url=http://www.netscape.com for SQL Injection vulnerabilities...
+2025-05-01 00:52:06,942 - INFO - 127.0.0.1 - - [01/May/2025 00:52:06] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:52:09,947 - INFO - 127.0.0.1 - - [01/May/2025 00:52:09] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:52:12,952 - INFO - 127.0.0.1 - - [01/May/2025 00:52:12] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:52:14,390 - INFO - \U0001f50e Scanning http://testfire.net/disclaimer.htm?url=http://www.netscape.com for XSS vulnerabilities...
+2025-05-01 00:52:14,390 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/disclaimer.htm?url=http://www.netscape.com.
+2025-05-01 00:52:14,390 - WARNING - \u26a0 SQLi detected at http://testfire.net/disclaimer.htm?url=http://www.netscape.com
+2025-05-01 00:52:14,390 - INFO - \U0001f50e Scanning http://testfire.net/disclaimer.htm?url=http://www.microsoft.com for SQL Injection vulnerabilities...
+2025-05-01 00:52:15,957 - INFO - 127.0.0.1 - - [01/May/2025 00:52:15] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:52:18,962 - INFO - 127.0.0.1 - - [01/May/2025 00:52:18] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:52:21,967 - INFO - 127.0.0.1 - - [01/May/2025 00:52:21] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:52:24,972 - INFO - 127.0.0.1 - - [01/May/2025 00:52:24] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:52:26,774 - INFO - \U0001f50e Scanning http://testfire.net/disclaimer.htm?url=http://www.microsoft.com for XSS vulnerabilities...
+2025-05-01 00:52:26,774 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/disclaimer.htm?url=http://www.microsoft.com.
+2025-05-01 00:52:26,774 - WARNING - \u26a0 SQLi detected at http://testfire.net/disclaimer.htm?url=http://www.microsoft.com
+2025-05-01 00:52:26,774 - INFO - 
+\U0001f50d Scan Report for http://testfire.net
+Timestamp: 2025-05-01 00:52:26
+Total Links Found: 26
+\U0001f517 http://testfire.net/index.jsp?content=inside_contact.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal.htm
+\U0001f517 http://testfire.net/index.jsp?content=business.htm
+\U0001f517 http://testfire.net/index.jsp?content=inside.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_deposit.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_checking.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_loans.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_cards.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_investments.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_other.htm
+\U0001f517 http://testfire.net/index.jsp?content=business_deposit.htm
+\U0001f517 http://testfire.net/index.jsp?content=business_lending.htm
+\U0001f517 http://testfire.net/index.jsp?content=business_cards.htm
+\U0001f517 http://testfire.net/index.jsp?content=business_insurance.htm
+\U0001f517 http://testfire.net/index.jsp?content=business_retirement.htm
+\U0001f517 http://testfire.net/index.jsp?content=business_other.htm
+\U0001f517 http://testfire.net/index.jsp?content=inside_about.htm
+\U0001f517 http://testfire.net/index.jsp?content=inside_investor.htm
+\U0001f517 http://testfire.net/index.jsp?content=inside_press.htm
+\U0001f517 http://testfire.net/index.jsp?content=inside_careers.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_savings.htm
+\U0001f517 http://testfire.net/index.jsp?content=privacy.htm
+\U0001f517 http://testfire.net/default.jsp?content=security.htm
+\U0001f517 http://testfire.net/index.jsp?content=security.htm
+\U0001f517 http://testfire.net/disclaimer.htm?url=http://www.netscape.com
+\U0001f517 http://testfire.net/disclaimer.htm?url=http://www.microsoft.com
+
+2025-05-01 00:52:26,809 - INFO - \u2705 Scan completed for http://testfire.net! Report saved at: static\2025-05-01-00-52-26-report.pdf
+2025-05-01 00:52:27,104 - INFO - Port 8080: Open - Unknown Service
+2025-05-01 00:52:27,105 - INFO - Port 443: Open - https
+2025-05-01 00:52:27,106 - INFO - Port 80: Open - http
+2025-05-01 00:52:27,976 - INFO - 127.0.0.1 - - [01/May/2025 00:52:27] "GET /progress HTTP/1.1" 200 -
+2025-05-01 00:52:29,444 - INFO - 
+\U0001f50d Scan Report for http://testfire.net
+Timestamp: 2025-05-01 00:52:29
+Total Links Found: 26
+\U0001f517 http://testfire.net/index.jsp?content=inside_contact.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal.htm
+\U0001f517 http://testfire.net/index.jsp?content=business.htm
+\U0001f517 http://testfire.net/index.jsp?content=inside.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_deposit.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_checking.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_loans.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_cards.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_investments.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_other.htm
+\U0001f517 http://testfire.net/index.jsp?content=business_deposit.htm
+\U0001f517 http://testfire.net/index.jsp?content=business_lending.htm
+\U0001f517 http://testfire.net/index.jsp?content=business_cards.htm
+\U0001f517 http://testfire.net/index.jsp?content=business_insurance.htm
+\U0001f517 http://testfire.net/index.jsp?content=business_retirement.htm
+\U0001f517 http://testfire.net/index.jsp?content=business_other.htm
+\U0001f517 http://testfire.net/index.jsp?content=inside_about.htm
+\U0001f517 http://testfire.net/index.jsp?content=inside_investor.htm
+\U0001f517 http://testfire.net/index.jsp?content=inside_press.htm
+\U0001f517 http://testfire.net/index.jsp?content=inside_careers.htm
+\U0001f517 http://testfire.net/index.jsp?content=personal_savings.htm
+\U0001f517 http://testfire.net/index.jsp?content=privacy.htm
+\U0001f517 http://testfire.net/default.jsp?content=security.htm
+\U0001f517 http://testfire.net/index.jsp?content=security.htm
+\U0001f517 http://testfire.net/disclaimer.htm?url=http://www.netscape.com
+\U0001f517 http://testfire.net/disclaimer.htm?url=http://www.microsoft.com
+\U0001f6aa Open Ports: [80, 443, 8080]
+
+2025-05-01 00:52:29,471 - INFO - \u2705 Scan completed! Risk Level: Medium Risk
+2025-05-01 00:52:29,471 - INFO - \U0001f4c4 Report saved at: static\2025-05-01-00-52-29-report.pdf
+2025-05-01 00:52:29,472 - INFO - 127.0.0.1 - - [01/May/2025 00:52:29] "POST /scanner HTTP/1.1" 200 -
+2025-05-01 00:52:59,067 - INFO - 127.0.0.1 - - [01/May/2025 00:52:59] "GET /static/2025-05-01-00-52-29-report.pdf HTTP/1.1" 200 -
