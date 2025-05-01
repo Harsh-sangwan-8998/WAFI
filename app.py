@@ -99,7 +99,9 @@ def scan():
 
         logger.info(f"✅ Scan completed! Risk Level: {scan_report['risk_level']}")
         logger.info(f"📄 Report saved at: {static_report_path}")
-
+           
+        scan_results = run_scan(url, max_links)
+        
         return jsonify({
             "status": "success",
             "risk_level": scan_report["risk_level"],
@@ -121,4 +123,4 @@ if __name__ == '__main__':
     print("\n🚀 Web Scanner is running!")
     print(f"🔗 Open your browser: {url}\n")
     webbrowser.open(url)
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", debug = True ,port=port)
