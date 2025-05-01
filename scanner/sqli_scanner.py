@@ -28,6 +28,8 @@ def detect_sqli(url):
         try:
             start_time = time.time()
             response = safe_request(test_url, timeout=15)  # Increased timeout
+            if not response:
+                return False  # Or handle gracefully
             end_time = time.time()
             
             sql_errors = [
@@ -61,3 +63,6 @@ def detect_sqli(url):
             logger.error(f"❌ Error testing {test_url} for SQLi: {str(e)}")
 
     return {"found": bool(results), "results": results}
+
+
+

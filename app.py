@@ -2,7 +2,7 @@ import os
 import webbrowser
 from datetime import datetime
 from urllib.parse import urlparse
-from flask import Flask, request, jsonify, render_template, send_from_directory, Response
+from flask import Flask, request, jsonify, render_template, send_from_directory, send_file, Response
 from routes.scan_routes import scan_routes
 from scanner.crawler import crawl_website
 from scanner.port_scanner import scan_ports
@@ -15,15 +15,13 @@ import requests
 # Initialize the Flask app
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
-# Register modular scan routes (if any)
+# Register modular scan routes
 app.register_blueprint(scan_routes)
 
-# Route for the home page
 @app.route('/')
 def home():
     return render_template("welcome.html")
 
-# Route to serve favicon
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(
@@ -32,7 +30,6 @@ def favicon():
         mimetype='image/vnd.microsoft.icon'
     )
 
-# Route for scanning progress (used with Server-Sent Events)
 @app.route('/progress')
 def progress():
     def generate():
@@ -43,7 +40,6 @@ def progress():
         yield f"data: {scan_progress['total']}\n\n"
     return Response(generate(), mimetype='text/event-stream')
 
-# Route for the scanning functionality (handles scan requests)
 @app.route('/scanner', methods=['POST'])
 def scan():
     try:
@@ -65,37 +61,37 @@ def scan():
         scan_progress["progress"] = 0
         scan_progress["total"] = max_links
 
-        # Start website crawling and vulnerability detection
+        # Crawl and analyze website
         scan_report = crawl_website(url, max_links)
         if not isinstance(scan_report, dict) or not scan_report:
             raise ValueError("Invalid scan report generated.")
 
-        # Port Scanning
+        # Port scanning
         hostname = urlparse(url).hostname
         open_ports_result = scan_ports(hostname)
         scan_report["open_ports"] = open_ports_result.get("open_ports", [])
         if open_ports_result.get("status") != "success":
             logger.warning(f"⚠️ Port scan failed: {open_ports_result.get('message', 'Unknown error')}")
 
-        # HTTP Headers
+        # HTTP headers
         try:
             response = requests.get(url, timeout=10)
-            headers = dict(response.headers)
+            scan_report["headers"] = dict(response.headers)
         except Exception as e:
-            headers = {"error": str(e)}
-        scan_report["headers"] = headers
+            scan_report["headers"] = {"error": str(e)}
 
-        # Risk Assessment
+        # Risk assessment
         scan_report["risk_level"] = assess_risk(scan_report.get("vulnerabilities", {}))
 
         # Logging
         log_data = generate_logs(url, scan_report)
 
-        # Generate report path
+        # Report path
         timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-        static_report_path = os.path.join("static", f"{timestamp}-report.pdf")
+        report_filename = f"{timestamp}-report.pdf"
+        static_report_path = os.path.join("static", report_filename)
 
-        # Generate PDF Report
+        # Generate PDF report
         pdf_path = generate_report(scan_report, output_path=static_report_path)
         if not os.path.exists(pdf_path):
             raise FileNotFoundError(f"Generated PDF not found: {pdf_path}")
@@ -106,19 +102,28 @@ def scan():
         return jsonify({
             "status": "success",
             "risk_level": scan_report["risk_level"],
-            "report_path": f"/static/{timestamp}-report.pdf",
+            "report_path": f"/static/{report_filename}",
             "log_data": log_data
         })
-
 
     except Exception as e:
         logger.error(f"❌ Scan failed: {str(e)}")
         return jsonify({"status": "error", "message": f"Server error: {str(e)}"}), 500
 
-# Route for testing the Flask app
 @app.route('/test')
 def test():
     return "✅ Flask is running successfully!"
+
+@app.route('/download-report')
+def download_report():
+    report_path = "static/scan_report.pdf"
+    if os.path.exists(report_path):
+        return send_file(report_path, as_attachment=True)
+    return "Report not found", 404
+
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return send_from_directory('static', filename)
 
 @app.errorhandler(500)
 def internal_error(e):
@@ -127,22 +132,6 @@ def internal_error(e):
 @app.errorhandler(404)
 def not_found_error(e):
     return jsonify({"status": "error", "message": "Not found"}), 404
-
-
-# Route to serve the PDF report dynamically
-@app.route('/static/<filename>')
-def download_file(filename):
-    return send_from_directory(os.path.join(app.root_path, 'static'), filename)
-
-# Route to serve scan report by filename (useful for static files like PDFs)
-@app.route('/scan_report')
-def scan_report():
-    report_path = "static/scan_report.pdf"
-    # Check if the report exists and return the file
-    if os.path.exists(report_path):
-        return send_from_directory(os.path.dirname(report_path), os.path.basename(report_path))
-    else:
-        return "Report not found", 404
 
 # Run the app
 if __name__ == '__main__':
