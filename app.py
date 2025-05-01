@@ -14,7 +14,7 @@ import requests
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
-# Register modular scan routes (if any)
+# Register blueprint
 app.register_blueprint(scan_routes)
 
 @app.route('/')
@@ -23,8 +23,7 @@ def home():
 
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route('/progress')
 def progress():
@@ -35,6 +34,10 @@ def progress():
             time.sleep(0.1)
         yield f"data: {scan_progress['total']}\n\n"
     return Response(generate(), mimetype='text/event-stream')
+
+@app.route('/report/<filename>')
+def get_report(filename):
+    return send_from_directory(os.path.join(app.root_path, "static"), filename)
 
 @app.route('/scan', methods=['POST'])
 def scan():
@@ -48,30 +51,27 @@ def scan():
         if not url:
             return jsonify({"status": "error", "message": "No URL provided"}), 400
 
-        # Normalize URL
         parsed_url = urlparse(url)
         if not parsed_url.scheme:
             url = "http://" + url
 
-        # Initialize progress tracking
         scan_progress["progress"] = 0
         scan_progress["total"] = max_links
 
-        # Start website crawling and vulnerability detection
         scan_report = crawl_website(url, max_links)
         if not isinstance(scan_report, dict) or not scan_report:
             raise ValueError("Invalid scan report generated.")
 
-        # Port Scanning (guarded)
+        # Port scanning
         try:
-            hostname = urlparse(url).hostname
+            hostname = parsed_url.hostname
             open_ports_result = scan_ports(hostname)
             scan_report["open_ports"] = open_ports_result.get("open_ports", [])
         except Exception as e:
             scan_report["open_ports"] = []
             logger.warning(f"⚠️ Port scan error: {str(e)}")
 
-        # HTTP Headers (guarded)
+        # Headers
         try:
             response = requests.get(url, timeout=10)
             headers = dict(response.headers)
@@ -79,28 +79,22 @@ def scan():
             headers = {"error": f"Header fetch failed: {str(e)}"}
         scan_report["headers"] = headers
 
-        # Risk Assessment
         scan_report["risk_level"] = assess_risk(scan_report.get("vulnerabilities", {}))
-
-        # Logging
         log_data = generate_logs(url, scan_report)
 
-        # Generate report path
         timestamp = datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-        static_report_path = os.path.join("static", f"{timestamp}-report.pdf")
+        pdf_filename = f"{timestamp}-report.pdf"
+        pdf_path = os.path.join(app.root_path, "static", pdf_filename)
 
-        # Generate PDF Report
-        pdf_path = generate_report(scan_report, output_path=static_report_path)
-        if not os.path.exists(pdf_path):
-            raise FileNotFoundError(f"Generated PDF not found: {pdf_path}")
+        generated = generate_report(scan_report, output_path=pdf_path)
+        if not os.path.exists(generated):
+            raise FileNotFoundError("Generated PDF not found.")
 
-        logger.info(f"✅ Scan completed! Risk Level: {scan_report['risk_level']}")
-        logger.info(f"📄 Report saved at: {static_report_path}")
-
+        logger.info(f"✅ Scan complete. Report: {pdf_filename}")
         return jsonify({
             "status": "success",
             "risk_level": scan_report["risk_level"],
-            "report_path": f"/static/{timestamp}-report.pdf",
+            "report_path": f"/report/{pdf_filename}",
             "log_data": log_data
         })
 
