@@ -1,0 +1,9 @@
+2025-05-02 03:22:13,602 - WARNING -  * Debugger is active!
+2025-05-02 03:22:13,606 - INFO -  * Debugger PIN: 344-770-632
+2025-05-02 03:22:13,627 - INFO - 127.0.0.1 - - [02/May/2025 03:22:13] "GET / HTTP/1.1" 200 -
+2025-05-02 03:22:13,731 - INFO - 127.0.0.1 - - [02/May/2025 03:22:13] "[36mGET /static/welcome.css HTTP/1.1[0m" 304 -
+2025-05-02 03:22:13,739 - INFO - 127.0.0.1 - - [02/May/2025 03:22:13] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:22:13,774 - INFO - 127.0.0.1 - - [02/May/2025 03:22:13] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:22:13,977 - INFO - 127.0.0.1 - - [02/May/2025 03:22:13] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:22:13,980 - INFO - 127.0.0.1 - - [02/May/2025 03:22:13] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:22:16,323 - INFO - 127.0.0.1 - - [02/May/2025 03:22:16] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -

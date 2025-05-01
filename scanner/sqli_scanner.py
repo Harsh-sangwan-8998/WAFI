@@ -1,6 +1,12 @@
 import requests
 import time
+from tenacity import retry, stop_after_attempt, wait_fixed
 from logger import logger  # Import centralized logger
+
+# Retry configuration: retry up to 3 times with a 5-second wait between retries
+@retry(stop=stop_after_attempt(3), wait=wait_fixed(5))
+def safe_request(url, timeout=10):
+    return requests.get(url, timeout=timeout)
 
 def detect_sqli(url):
     """
@@ -21,17 +27,15 @@ def detect_sqli(url):
         test_url = f"{url}?id={payload}"
         try:
             start_time = time.time()
-            response = requests.get(test_url, timeout=10)
+            response = safe_request(test_url, timeout=15)  # Increased timeout
             end_time = time.time()
             
-            # List of known SQL error patterns
             sql_errors = [
                 "syntax error", "mysql_fetch", "mysqli_fetch",
                 "SQL syntax", "Warning: mysql_", "You have an error in your SQL syntax",
                 "Unclosed quotation mark", "quoted string not properly terminated"
             ]
 
-            # Check for SQL errors in the response text
             if any(error in response.text.lower() for error in sql_errors):  
                 logger.warning(f"⚠️ SQL Injection detected at {test_url} with payload: {payload}")
                 results.append({
@@ -53,22 +57,7 @@ def detect_sqli(url):
                     "mitigation": "Use input validation and restrict database operations."
                 })
 
-        except requests.exceptions.Timeout:
-            # Timeout exception handling
-            logger.error(f"⏰ Timeout error while testing {test_url} for SQLi.")
-        except requests.exceptions.ConnectionError:
-            # Connection error handling
-            logger.error(f"🌐 Connection error while testing {test_url} for SQLi.")
-        except requests.exceptions.HTTPError as http_err:
-            # HTTP error handling (non-2xx status codes)
-            logger.error(f"🚫 HTTP error while testing {test_url} for SQLi: {http_err}")
         except requests.exceptions.RequestException as e:
-            # Any other requests-related error
             logger.error(f"❌ Error testing {test_url} for SQLi: {str(e)}")
 
     return {"found": bool(results), "results": results}
-
-if __name__ == "__main__":
-    url = "http://testfire.net"
-    result = detect_sqli(url)
-    print(f"🔍 Scanning: {url}\n{result}\n")

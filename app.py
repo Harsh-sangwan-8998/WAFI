@@ -12,16 +12,18 @@ from logger import logger, generate_logs
 from progress import scan_progress
 import requests
 
+# Initialize the Flask app
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
 # Register modular scan routes (if any)
 app.register_blueprint(scan_routes)
 
+# Route for the home page
 @app.route('/')
 def home():
     return render_template("welcome.html")
 
-
+# Route to serve favicon
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(
@@ -30,7 +32,7 @@ def favicon():
         mimetype='image/vnd.microsoft.icon'
     )
 
-
+# Route for scanning progress (used with Server-Sent Events)
 @app.route('/progress')
 def progress():
     def generate():
@@ -41,6 +43,7 @@ def progress():
         yield f"data: {scan_progress['total']}\n\n"
     return Response(generate(), mimetype='text/event-stream')
 
+# Route for the scanning functionality (handles scan requests)
 @app.route('/scanner', methods=['POST'])
 def scan():
     try:
@@ -76,7 +79,7 @@ def scan():
 
         # HTTP Headers
         try:
-            response = requests.get(url, timeout=5)
+            response = requests.get(url, timeout=10)
             headers = dict(response.headers)
         except Exception as e:
             headers = {"error": str(e)}
@@ -99,9 +102,7 @@ def scan():
 
         logger.info(f"✅ Scan completed! Risk Level: {scan_report['risk_level']}")
         logger.info(f"📄 Report saved at: {static_report_path}")
-           
-        scan_results = run_scan(url, max_links)
-        
+
         return jsonify({
             "status": "success",
             "risk_level": scan_report["risk_level"],
@@ -113,14 +114,31 @@ def scan():
         logger.error(f"❌ Scan failed: {str(e)}")
         return jsonify({"status": "error", "message": f"Server error: {str(e)}"}), 500
 
+# Route for testing the Flask app
 @app.route('/test')
 def test():
     return "✅ Flask is running successfully!"
 
+# Route to serve the PDF report dynamically
+@app.route('/static/<filename>')
+def download_file(filename):
+    return send_from_directory(os.path.join(app.root_path, 'static'), filename)
+
+# Route to serve scan report by filename (useful for static files like PDFs)
+@app.route('/scan_report')
+def scan_report():
+    report_path = "static/scan_report.pdf"
+    # Check if the report exists and return the file
+    if os.path.exists(report_path):
+        return send_from_directory(os.path.dirname(report_path), os.path.basename(report_path))
+    else:
+        return "Report not found", 404
+
+# Run the app
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     url = f"http://127.0.0.1:{port}/"
     print("\n🚀 Web Scanner is running!")
     print(f"🔗 Open your browser: {url}\n")
     webbrowser.open(url)
-    app.run(host="0.0.0.0", debug = True ,port=port)
+    app.run(host="0.0.0.0", debug=True, port=port)

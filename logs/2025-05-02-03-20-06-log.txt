@@ -1,0 +1,89 @@
+2025-05-02 03:20:06,776 - WARNING -  * Debugger is active!
+2025-05-02 03:20:06,781 - INFO -  * Debugger PIN: 344-770-632
+2025-05-02 03:20:06,853 - INFO - 127.0.0.1 - - [02/May/2025 03:20:06] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:20:06,856 - INFO - 127.0.0.1 - - [02/May/2025 03:20:06] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:20:06,940 - INFO - 127.0.0.1 - - [02/May/2025 03:20:06] "GET / HTTP/1.1" 200 -
+2025-05-02 03:20:06,944 - INFO - 127.0.0.1 - - [02/May/2025 03:20:06] "GET / HTTP/1.1" 200 -
+2025-05-02 03:20:06,952 - INFO - 127.0.0.1 - - [02/May/2025 03:20:06] "[36mGET /static/welcome.css HTTP/1.1[0m" 304 -
+2025-05-02 03:20:06,956 - INFO - 127.0.0.1 - - [02/May/2025 03:20:06] "[36mGET /static/welcome.css HTTP/1.1[0m" 304 -
+2025-05-02 03:20:06,968 - INFO - 127.0.0.1 - - [02/May/2025 03:20:06] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:20:07,035 - INFO - 127.0.0.1 - - [02/May/2025 03:20:07] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:20:07,241 - INFO - 127.0.0.1 - - [02/May/2025 03:20:07] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:20:07,243 - INFO - 127.0.0.1 - - [02/May/2025 03:20:07] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:20:11,812 - INFO - \U0001f50d Received scan request for: http://testfire.net (Max Links: 5)
+2025-05-02 03:20:11,812 - INFO - \U0001f30d Starting crawl for: http://testfire.net (Max Pages: 5)
+2025-05-02 03:20:11,815 - INFO - 127.0.0.1 - - [02/May/2025 03:20:11] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:20:12,411 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-05-02 03:20:13,557 - INFO - 127.0.0.1 - - [02/May/2025 03:20:13] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:20:13,565 - INFO - 127.0.0.1 - - [02/May/2025 03:20:13] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:20:13,605 - INFO - 127.0.0.1 - - [02/May/2025 03:20:13] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:20:13,608 - INFO - 127.0.0.1 - - [02/May/2025 03:20:13] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:20:21,331 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-05-02 03:20:21,332 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-05-02 03:20:21,927 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/search.jsp
+2025-05-02 03:20:21,927 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-05-02 03:20:21,927 - INFO - \U0001f4c8 Progress: 1/5 pages scanned
+2025-05-02 03:20:23,134 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-05-02 03:20:32,474 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-05-02 03:20:32,475 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-05-02 03:20:33,121 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/search.jsp
+2025-05-02 03:20:33,121 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-05-02 03:20:33,121 - INFO - \U0001f4c8 Progress: 2/5 pages scanned
+2025-05-02 03:20:34,278 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-05-02 03:20:43,628 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-05-02 03:20:43,628 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-05-02 03:20:44,292 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/search.jsp
+2025-05-02 03:20:44,292 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-05-02 03:20:44,292 - INFO - \U0001f50e Scanning http://testfire.net/doLogin for SQL Injection vulnerabilities...
+2025-05-02 03:20:58,547 - INFO - \U0001f50e Scanning http://testfire.net/doLogin for XSS vulnerabilities...
+2025-05-02 03:20:58,547 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/doLogin.
+2025-05-02 03:20:59,428 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/doLogin
+2025-05-02 03:20:59,428 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/doLogin - CSRF protection missing (no CSRF token found in GET form).
+2025-05-02 03:20:59,428 - INFO - \U0001f4c8 Progress: 3/5 pages scanned
+2025-05-02 03:21:00,471 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-05-02 03:21:09,910 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-05-02 03:21:09,910 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-05-02 03:21:10,668 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/search.jsp
+2025-05-02 03:21:10,668 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-05-02 03:21:10,668 - INFO - \U0001f4c8 Progress: 4/5 pages scanned
+2025-05-02 03:21:11,776 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-05-02 03:21:21,154 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-05-02 03:21:21,154 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-05-02 03:21:21,766 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/search.jsp
+2025-05-02 03:21:21,766 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-05-02 03:21:21,767 - INFO - \U0001f50e Scanning http://testfire.net/sendFeedback for SQL Injection vulnerabilities...
+2025-05-02 03:21:30,909 - INFO - \U0001f50e Scanning http://testfire.net/sendFeedback for XSS vulnerabilities...
+2025-05-02 03:21:30,909 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/sendFeedback.
+2025-05-02 03:21:31,492 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/sendFeedback
+2025-05-02 03:21:31,492 - INFO - \U0001f4c8 Progress: 5/5 pages scanned
+2025-05-02 03:21:31,993 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside_contact.htm for SQL Injection vulnerabilities...
+2025-05-02 03:21:34,564 - INFO - 127.0.0.1 - - [02/May/2025 03:21:34] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:21:37,573 - INFO - 127.0.0.1 - - [02/May/2025 03:21:37] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:21:40,578 - INFO - 127.0.0.1 - - [02/May/2025 03:21:40] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:21:41,670 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside_contact.htm for XSS vulnerabilities...
+2025-05-02 03:21:41,670 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=inside_contact.htm.
+2025-05-02 03:21:41,670 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=inside_contact.htm
+2025-05-02 03:21:41,670 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal.htm for SQL Injection vulnerabilities...
+2025-05-02 03:21:43,585 - INFO - 127.0.0.1 - - [02/May/2025 03:21:43] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:21:46,589 - INFO - 127.0.0.1 - - [02/May/2025 03:21:46] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:21:49,596 - INFO - 127.0.0.1 - - [02/May/2025 03:21:49] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:21:51,039 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal.htm for XSS vulnerabilities...
+2025-05-02 03:21:51,039 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=personal.htm.
+2025-05-02 03:21:51,039 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=personal.htm
+2025-05-02 03:21:51,039 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business.htm for SQL Injection vulnerabilities...
+2025-05-02 03:21:52,603 - INFO - 127.0.0.1 - - [02/May/2025 03:21:52] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:21:55,609 - INFO - 127.0.0.1 - - [02/May/2025 03:21:55] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:21:58,616 - INFO - 127.0.0.1 - - [02/May/2025 03:21:58] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:22:00,051 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=business.htm for XSS vulnerabilities...
+2025-05-02 03:22:00,051 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=business.htm.
+2025-05-02 03:22:00,051 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=business.htm
+2025-05-02 03:22:00,051 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside.htm for SQL Injection vulnerabilities...
+2025-05-02 03:22:01,621 - INFO - 127.0.0.1 - - [02/May/2025 03:22:01] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:22:04,625 - INFO - 127.0.0.1 - - [02/May/2025 03:22:04] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:22:07,630 - INFO - 127.0.0.1 - - [02/May/2025 03:22:07] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:22:09,370 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=inside.htm for XSS vulnerabilities...
+2025-05-02 03:22:09,370 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/index.jsp?content=inside.htm.
+2025-05-02 03:22:09,370 - WARNING - \u26a0 SQLi detected at http://testfire.net/index.jsp?content=inside.htm
+2025-05-02 03:22:09,370 - INFO - \U0001f50e Scanning http://testfire.net/index.jsp?content=personal_deposit.htm for SQL Injection vulnerabilities...
+2025-05-02 03:22:10,635 - INFO - 127.0.0.1 - - [02/May/2025 03:22:10] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:22:12,673 - INFO -  * Detected change in 'E:\\Minor\\WAFI Final\\app.py', reloading
