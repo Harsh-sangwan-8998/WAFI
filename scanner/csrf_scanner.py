@@ -10,7 +10,7 @@ def check_csrf(url):
     """
     try:
         session = requests.Session()
-        response = session.get(url, timeout=10)
+        response = session.get(url, timeout=15)
         response.raise_for_status()  # Raise an exception for bad status codes
         soup = BeautifulSoup(response.text, 'html.parser')
 

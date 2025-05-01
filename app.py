@@ -85,8 +85,9 @@ def scan():
     if not url:
         return jsonify({"status": "error", "message": "No URL provided"}), 400
 
+    
+        # Start scan in background thread
     thread = Thread(target=perform_scan, args=(url, max_links))
-    thread.daemon = True
     thread.start()
 
     return jsonify({
