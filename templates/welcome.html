@@ -35,31 +35,28 @@
             </div>
         </div>
     </div>
-
     <script>
         const form = document.getElementById("scanForm");
         const progressBar = document.getElementById("scanProgress");
         const progressWrapper = document.getElementById("progressWrapper");
         const progressText = document.getElementById("progressText");
-
+    
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
-
+    
             const urlInput = document.getElementById("url").value.trim();
             const maxLinks = parseInt(document.getElementById("max_links").value);
-
-            // Validate URL
+    
             const urlPattern = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
             if (!urlPattern.test(urlInput)) {
                 alert("⚠️ Please enter a valid URL (e.g., http://example.com)");
                 return;
             }
-
+    
             progressWrapper.style.display = "block";
             progressBar.value = 0;
             progressText.textContent = "0% Complete";
-
-            // Start SSE for progress updates
+    
             const eventSource = new EventSource("/progress");
             eventSource.onmessage = (event) => {
                 const progress = parseInt(event.data);
@@ -67,34 +64,40 @@
                 progressBar.value = percentage;
                 progressText.textContent = `${Math.round(percentage)}% Complete`;
             };
-
+    
             try {
                 const response = await fetch("/scan", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ url: urlInput, max_links: maxLinks }),
                 });
-
-                const result = await response.json();
+    
+                const contentType = response.headers.get("content-type");
+    
                 eventSource.close();
-
                 progressBar.value = 100;
                 progressText.textContent = "100% Complete";
-
-                if (result.status === "success") {
-                    alert("✅ Scan complete! Risk Level: " + result.risk_level);
-                    window.open(result.report_path, '_blank');
+    
+                if (contentType && contentType.includes("application/json")) {
+                    const result = await response.json();
+                    if (result.status === "success") {
+                        alert("✅ Scan complete! Risk Level: " + result.risk_level);
+                        window.open(result.report_path, '_blank');
+                    } else {
+                        alert("⚠️ Scan error: " + result.message);
+                    }
                 } else {
-                    alert("⚠️ Scan error: " + result.message);
+                    const text = await response.text();
+                    alert("❌ Unexpected response: " + text);
                 }
             } catch (err) {
                 eventSource.close();
                 progressBar.value = 100;
                 progressText.textContent = "100% Complete";
                 alert("❌ Unexpected error: " + err.message);
-                window.open('/static/scan_report.pdf', '_blank');
             }
         });
     </script>
+    
 </body>
 </html>

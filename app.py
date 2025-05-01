@@ -36,7 +36,7 @@ def progress():
         yield f"data: {scan_progress['total']}\n\n"
     return Response(generate(), mimetype='text/event-stream')
 
-@app.route('/scanner', methods=['POST'])
+@app.route('/scan', methods=['POST'])
 def scan():
     try:
         data = request.get_json()
@@ -62,19 +62,21 @@ def scan():
         if not isinstance(scan_report, dict) or not scan_report:
             raise ValueError("Invalid scan report generated.")
 
-        # Port Scanning
-        hostname = urlparse(url).hostname
-        open_ports_result = scan_ports(hostname)
-        scan_report["open_ports"] = open_ports_result.get("open_ports", [])
-        if open_ports_result.get("status") != "success":
-            logger.warning(f"⚠️ Port scan failed: {open_ports_result.get('message', 'Unknown error')}")
-
-        # HTTP Headers
+        # Port Scanning (guarded)
         try:
-            response = requests.get(url, timeout=5)
+            hostname = urlparse(url).hostname
+            open_ports_result = scan_ports(hostname)
+            scan_report["open_ports"] = open_ports_result.get("open_ports", [])
+        except Exception as e:
+            scan_report["open_ports"] = []
+            logger.warning(f"⚠️ Port scan error: {str(e)}")
+
+        # HTTP Headers (guarded)
+        try:
+            response = requests.get(url, timeout=10)
             headers = dict(response.headers)
         except Exception as e:
-            headers = {"error": str(e)}
+            headers = {"error": f"Header fetch failed: {str(e)}"}
         scan_report["headers"] = headers
 
         # Risk Assessment

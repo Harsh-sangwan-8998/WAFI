@@ -54,6 +54,16 @@ def detect_sqli(url):
         except requests.exceptions.RequestException as e:
             logger.error(f"❌ Error testing {test_url} for SQLi: {str(e)}")
 
+    # Fallback if no vulnerabilities found or target unreachable
+    if not results:
+        results.append({
+            "url": url,
+            "risk_level": "Unknown",
+            "details": "No SQLi vulnerabilities found or target did not respond.",
+            "payload": None,
+            "mitigation": "Ensure the target is reachable and supports query parameters."
+        })
+
     return {"found": bool(results), "results": results}
 
 if __name__ == "__main__":
