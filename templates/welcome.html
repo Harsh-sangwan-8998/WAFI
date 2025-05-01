@@ -75,17 +75,23 @@
                     body: JSON.stringify({ url: urlInput, max_links: maxLinks }),
                 });
 
-                const result = await response.json();
-                eventSource.close();
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    const result = await response.json();
+                    eventSource.close();
 
-                progressBar.value = 100;
-                progressText.textContent = "100% Complete";
+                    progressBar.value = 100;
+                    progressText.textContent = "100% Complete";
 
-                if (result.status === "success") {
-                    alert("✅ Scan complete! Risk Level: " + result.risk_level);
-                    window.open(result.report_path, '_blank');
+                    if (result.status === "success") {
+                        alert("✅ Scan complete! Risk Level: " + result.risk_level);
+                        window.open(result.report_path, '_blank');
+                    } else {
+                        alert("⚠️ Scan error: " + result.message);
+                    }
                 } else {
-                    alert("⚠️ Scan error: " + result.message);
+                    const text = await response.text();
+                    throw new Error("Expected JSON, got HTML:\n" + text);
                 }
             } catch (err) {
                 eventSource.close();
