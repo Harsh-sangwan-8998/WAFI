@@ -14,7 +14,7 @@
     <div class="video-container">
         <video autoplay muted loop>
             <source src="{{ url_for('static', filename='video/welcome1.mp4') }}" type="video/mp4">
-            Your browser does not support the video tag.
+            Your browser does not support the video tag. Please upgrade your browser to view the video.
         </video>
 
         <div class="form-container">
@@ -69,7 +69,7 @@
             };
 
             try {
-                const response = await fetch("/scanner", {
+                const response = await fetch("/scan", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ url: urlInput, max_links: maxLinks }),
