@@ -110,6 +110,7 @@ def scan():
             "log_data": log_data
         })
 
+
     except Exception as e:
         logger.error(f"❌ Scan failed: {str(e)}")
         return jsonify({"status": "error", "message": f"Server error: {str(e)}"}), 500
@@ -118,6 +119,15 @@ def scan():
 @app.route('/test')
 def test():
     return "✅ Flask is running successfully!"
+
+@app.errorhandler(500)
+def internal_error(e):
+    return jsonify({"status": "error", "message": "Internal server error", "details": str(e)}), 500
+
+@app.errorhandler(404)
+def not_found_error(e):
+    return jsonify({"status": "error", "message": "Not found"}), 404
+
 
 # Route to serve the PDF report dynamically
 @app.route('/static/<filename>')

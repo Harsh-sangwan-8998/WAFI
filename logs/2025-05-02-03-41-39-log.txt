@@ -1,0 +1,26 @@
+2025-05-02 03:41:40,094 - WARNING -  * Debugger is active!
+2025-05-02 03:41:40,100 - INFO -  * Debugger PIN: 344-770-632
+2025-05-02 03:41:40,138 - INFO - 127.0.0.1 - - [02/May/2025 03:41:40] "GET / HTTP/1.1" 200 -
+2025-05-02 03:41:40,141 - INFO - 127.0.0.1 - - [02/May/2025 03:41:40] "GET / HTTP/1.1" 200 -
+2025-05-02 03:41:40,204 - INFO - 127.0.0.1 - - [02/May/2025 03:41:40] "[36mGET /static/welcome.css HTTP/1.1[0m" 304 -
+2025-05-02 03:41:40,208 - INFO - 127.0.0.1 - - [02/May/2025 03:41:40] "[36mGET /static/welcome.css HTTP/1.1[0m" 304 -
+2025-05-02 03:41:40,209 - INFO - 127.0.0.1 - - [02/May/2025 03:41:40] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:41:40,259 - INFO - 127.0.0.1 - - [02/May/2025 03:41:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-02 03:41:40,310 - INFO - 127.0.0.1 - - [02/May/2025 03:41:40] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:41:40,637 - INFO - 127.0.0.1 - - [02/May/2025 03:41:40] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 03:41:46,364 - INFO - \U0001f50d Received scan request for: http://testfire.net (Max Links: 5)
+2025-05-02 03:41:46,364 - INFO - \U0001f30d Starting crawl for: http://testfire.net (Max Pages: 5)
+2025-05-02 03:41:46,368 - INFO - 127.0.0.1 - - [02/May/2025 03:41:46] "GET /progress HTTP/1.1" 200 -
+2025-05-02 03:41:47,143 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-05-02 03:41:57,169 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-05-02 03:41:57,171 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-05-02 03:41:57,734 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/search.jsp
+2025-05-02 03:41:57,734 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-05-02 03:41:57,734 - INFO - \U0001f4c8 Progress: 1/5 pages scanned
+2025-05-02 03:41:58,786 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
+2025-05-02 03:42:08,780 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for XSS vulnerabilities...
+2025-05-02 03:42:08,780 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net/search.jsp.
+2025-05-02 03:42:09,436 - WARNING - \u26a0 SQLi detected in form at http://testfire.net/search.jsp
+2025-05-02 03:42:09,436 - WARNING - \u26a0 CSRF vulnerability detected in form at http://testfire.net/search.jsp - CSRF protection missing (no CSRF token found in GET form).
+2025-05-02 03:42:09,437 - INFO - \U0001f4c8 Progress: 2/5 pages scanned
+2025-05-02 03:42:10,594 - INFO - \U0001f50e Scanning http://testfire.net/search.jsp for SQL Injection vulnerabilities...
