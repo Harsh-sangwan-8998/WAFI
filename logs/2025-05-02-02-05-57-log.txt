@@ -1,0 +1,23 @@
+2025-05-02 02:05:57,728 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.191.3.82:5000
+2025-05-02 02:05:57,729 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 02:05:58,062 - INFO - 127.0.0.1 - - [02/May/2025 02:05:58] "GET / HTTP/1.1" 200 -
+2025-05-02 02:05:58,282 - INFO - 127.0.0.1 - - [02/May/2025 02:05:58] "GET /static/welcome.css HTTP/1.1" 200 -
+2025-05-02 02:05:58,300 - INFO - 127.0.0.1 - - [02/May/2025 02:05:58] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:05:58,374 - INFO - 127.0.0.1 - - [02/May/2025 02:05:58] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:05:58,751 - INFO - 127.0.0.1 - - [02/May/2025 02:05:58] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:05:58,756 - INFO - 127.0.0.1 - - [02/May/2025 02:05:58] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:05:58,898 - INFO - 127.0.0.1 - - [02/May/2025 02:05:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-02 02:06:20,857 - INFO - \U0001f50e Scanning http://testfire.net for SQL Injection vulnerabilities...
+2025-05-02 02:06:20,872 - INFO - 127.0.0.1 - - [02/May/2025 02:06:20] "GET /progress HTTP/1.1" 200 -
+2025-05-02 02:06:23,881 - INFO - 127.0.0.1 - - [02/May/2025 02:06:23] "GET /progress HTTP/1.1" 200 -
+2025-05-02 02:06:26,887 - INFO - 127.0.0.1 - - [02/May/2025 02:06:26] "GET /progress HTTP/1.1" 200 -
+2025-05-02 02:07:26,986 - ERROR - \u274c Error testing http://testfire.net?id=admin' # for SQLi: HTTPConnectionPool(host='testfire.net', port=80): Max retries exceeded with url: /?id=admin'%20 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021CD5946780>: Failed to establish a new connection: [WinError 10053] An established connection was aborted by the software in your host machine'))
+2025-05-02 02:07:27,013 - ERROR - \u274c Error testing http://testfire.net?id=1' OR '1'='1' /* for SQLi: HTTPConnectionPool(host='testfire.net', port=80): Max retries exceeded with url: /?id=1'%20OR%20'1'='1'%20/* (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000021CD5944260>: Failed to resolve 'testfire.net' ([Errno 11001] getaddrinfo failed)"))
+2025-05-02 02:07:27,015 - ERROR - \u274c Error testing http://testfire.net?id='; EXEC xp_cmdshell('dir'); -- for SQLi: HTTPConnectionPool(host='testfire.net', port=80): Max retries exceeded with url: /?id=';%20EXEC%20xp_cmdshell('dir');%20-- (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x0000021CD5958650>: Failed to resolve 'testfire.net' ([Errno 11001] getaddrinfo failed)"))
+2025-05-02 02:07:27,016 - INFO - \U0001f50e Scanning http://testfire.net for XSS vulnerabilities...
+2025-05-02 02:07:27,016 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net.
+2025-05-02 02:07:27,017 - ERROR - \u274c Invalid hostname: [Errno 11001] getaddrinfo failed
+2025-05-02 02:07:27,020 - INFO - 127.0.0.1 - - [02/May/2025 02:07:27] "POST /scan HTTP/1.1" 200 -

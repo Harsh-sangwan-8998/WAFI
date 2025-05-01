@@ -21,10 +21,15 @@ app.register_blueprint(scan_routes)
 def home():
     return render_template("welcome.html")
 
+
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
+    return send_from_directory(
+        directory=app.root_path,
+        path='favicon.ico',
+        mimetype='image/vnd.microsoft.icon'
+    )
+
 
 @app.route('/progress')
 def progress():
@@ -36,7 +41,7 @@ def progress():
         yield f"data: {scan_progress['total']}\n\n"
     return Response(generate(), mimetype='text/event-stream')
 
-@app.route('/scan', methods=['POST'])
+@app.route('/scanner', methods=['POST'])
 def scan():
     try:
         data = request.get_json()
@@ -62,21 +67,19 @@ def scan():
         if not isinstance(scan_report, dict) or not scan_report:
             raise ValueError("Invalid scan report generated.")
 
-        # Port Scanning (guarded)
-        try:
-            hostname = urlparse(url).hostname
-            open_ports_result = scan_ports(hostname)
-            scan_report["open_ports"] = open_ports_result.get("open_ports", [])
-        except Exception as e:
-            scan_report["open_ports"] = []
-            logger.warning(f"⚠️ Port scan error: {str(e)}")
+        # Port Scanning
+        hostname = urlparse(url).hostname
+        open_ports_result = scan_ports(hostname)
+        scan_report["open_ports"] = open_ports_result.get("open_ports", [])
+        if open_ports_result.get("status") != "success":
+            logger.warning(f"⚠️ Port scan failed: {open_ports_result.get('message', 'Unknown error')}")
 
-        # HTTP Headers (guarded)
+        # HTTP Headers
         try:
-            response = requests.get(url, timeout=10)
+            response = requests.get(url, timeout=5)
             headers = dict(response.headers)
         except Exception as e:
-            headers = {"error": f"Header fetch failed: {str(e)}"}
+            headers = {"error": str(e)}
         scan_report["headers"] = headers
 
         # Risk Assessment

@@ -1,0 +1,24 @@
+2025-05-02 02:07:46,168 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.191.3.82:5000
+2025-05-02 02:07:46,168 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 02:07:46,269 - INFO - 127.0.0.1 - - [02/May/2025 02:07:46] "GET / HTTP/1.1" 200 -
+2025-05-02 02:07:46,548 - INFO - 127.0.0.1 - - [02/May/2025 02:07:46] "[36mGET /static/welcome.css HTTP/1.1[0m" 304 -
+2025-05-02 02:07:46,579 - INFO - 127.0.0.1 - - [02/May/2025 02:07:46] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:07:46,690 - INFO - 127.0.0.1 - - [02/May/2025 02:07:46] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:07:47,068 - INFO - 127.0.0.1 - - [02/May/2025 02:07:47] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:07:47,074 - INFO - 127.0.0.1 - - [02/May/2025 02:07:47] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:07:47,220 - INFO - 127.0.0.1 - - [02/May/2025 02:07:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-02 02:07:52,705 - INFO - \U0001f50e Scanning http://testfire.net for SQL Injection vulnerabilities...
+2025-05-02 02:07:52,712 - INFO - 127.0.0.1 - - [02/May/2025 02:07:52] "GET /progress HTTP/1.1" 200 -
+2025-05-02 02:07:55,719 - INFO - 127.0.0.1 - - [02/May/2025 02:07:55] "GET /progress HTTP/1.1" 200 -
+2025-05-02 02:07:58,727 - INFO - 127.0.0.1 - - [02/May/2025 02:07:58] "GET /progress HTTP/1.1" 200 -
+2025-05-02 02:08:01,732 - INFO - 127.0.0.1 - - [02/May/2025 02:08:01] "GET /progress HTTP/1.1" 200 -
+2025-05-02 02:08:02,062 - INFO - \U0001f50e Scanning http://testfire.net for XSS vulnerabilities...
+2025-05-02 02:08:02,063 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net.
+2025-05-02 02:08:02,355 - INFO - Port 443: Open - https
+2025-05-02 02:08:02,355 - INFO - Port 8080: Open - Unknown Service
+2025-05-02 02:08:02,356 - INFO - Port 80: Open - http
+2025-05-02 02:08:03,693 - INFO - 127.0.0.1 - - [02/May/2025 02:08:03] "POST /scan HTTP/1.1" 200 -
+2025-05-02 02:12:50,769 - INFO - 127.0.0.1 - - [02/May/2025 02:12:50] "[33mGET /static/scan_report.pdf HTTP/1.1[0m" 404 -

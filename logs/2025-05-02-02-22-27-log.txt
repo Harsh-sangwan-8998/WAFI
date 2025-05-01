@@ -1,0 +1,23 @@
+2025-05-02 02:22:27,857 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.191.3.82:5000
+2025-05-02 02:22:27,857 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 02:22:27,902 - INFO - 127.0.0.1 - - [02/May/2025 02:22:27] "GET / HTTP/1.1" 200 -
+2025-05-02 02:22:28,103 - INFO - 127.0.0.1 - - [02/May/2025 02:22:28] "[36mGET /static/welcome.css HTTP/1.1[0m" 304 -
+2025-05-02 02:22:28,108 - INFO - 127.0.0.1 - - [02/May/2025 02:22:28] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:22:28,178 - INFO - 127.0.0.1 - - [02/May/2025 02:22:28] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:22:28,425 - INFO - 127.0.0.1 - - [02/May/2025 02:22:28] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:22:28,431 - INFO - 127.0.0.1 - - [02/May/2025 02:22:28] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:22:32,855 - INFO - \U0001f50e Scanning http://testfire.net for SQL Injection vulnerabilities...
+2025-05-02 02:22:32,857 - INFO - 127.0.0.1 - - [02/May/2025 02:22:32] "GET /progress HTTP/1.1" 200 -
+2025-05-02 02:22:35,864 - INFO - 127.0.0.1 - - [02/May/2025 02:22:35] "GET /progress HTTP/1.1" 200 -
+2025-05-02 02:22:38,580 - INFO - 127.0.0.1 - - [02/May/2025 02:22:38] "[35m[1mGET /static/video/welcome1.mp4 HTTP/1.1[0m" 206 -
+2025-05-02 02:22:38,871 - INFO - 127.0.0.1 - - [02/May/2025 02:22:38] "GET /progress HTTP/1.1" 200 -
+2025-05-02 02:22:41,876 - INFO - 127.0.0.1 - - [02/May/2025 02:22:41] "GET /progress HTTP/1.1" 200 -
+2025-05-02 02:22:42,652 - INFO - \U0001f50e Scanning http://testfire.net for XSS vulnerabilities...
+2025-05-02 02:22:42,653 - INFO - \u2705 No XSS vulnerabilities detected in http://testfire.net.
+2025-05-02 02:22:43,014 - INFO - Port 80: Open - http
+2025-05-02 02:22:43,014 - INFO - Port 443: Open - https
+2025-05-02 02:22:43,014 - INFO - Port 8080: Open - Unknown Service
+2025-05-02 02:22:44,245 - INFO - 127.0.0.1 - - [02/May/2025 02:22:44] "POST /scan HTTP/1.1" 200 -

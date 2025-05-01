@@ -14,7 +14,7 @@
     <div class="video-container">
         <video autoplay muted loop>
             <source src="{{ url_for('static', filename='video/welcome1.mp4') }}" type="video/mp4">
-            Your browser does not support the video tag. Please upgrade your browser to view the video.
+            Your browser does not support the video tag.
         </video>
 
         <div class="form-container">
@@ -35,28 +35,31 @@
             </div>
         </div>
     </div>
+
     <script>
         const form = document.getElementById("scanForm");
         const progressBar = document.getElementById("scanProgress");
         const progressWrapper = document.getElementById("progressWrapper");
         const progressText = document.getElementById("progressText");
-    
+
         form.addEventListener("submit", async (e) => {
             e.preventDefault();
-    
+
             const urlInput = document.getElementById("url").value.trim();
             const maxLinks = parseInt(document.getElementById("max_links").value);
-    
+
+            // Validate URL
             const urlPattern = /^https?:\/\/[\w\-]+(\.[\w\-]+)+[/#?]?.*$/;
             if (!urlPattern.test(urlInput)) {
                 alert("⚠️ Please enter a valid URL (e.g., http://example.com)");
                 return;
             }
-    
+
             progressWrapper.style.display = "block";
             progressBar.value = 0;
             progressText.textContent = "0% Complete";
-    
+
+            // Start SSE for progress updates
             const eventSource = new EventSource("/progress");
             eventSource.onmessage = (event) => {
                 const progress = parseInt(event.data);
@@ -64,40 +67,34 @@
                 progressBar.value = percentage;
                 progressText.textContent = `${Math.round(percentage)}% Complete`;
             };
-    
+
             try {
-                const response = await fetch("/scan", {
+                const response = await fetch("/scanner", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ url: urlInput, max_links: maxLinks }),
                 });
-    
-                const contentType = response.headers.get("content-type");
-    
+
+                const result = await response.json();
                 eventSource.close();
+
                 progressBar.value = 100;
                 progressText.textContent = "100% Complete";
-    
-                if (contentType && contentType.includes("application/json")) {
-                    const result = await response.json();
-                    if (result.status === "success") {
-                        alert("✅ Scan complete! Risk Level: " + result.risk_level);
-                        window.open(result.report_path, '_blank');
-                    } else {
-                        alert("⚠️ Scan error: " + result.message);
-                    }
+
+                if (result.status === "success") {
+                    alert("✅ Scan complete! Risk Level: " + result.risk_level);
+                    window.open(result.report_path, '_blank');
                 } else {
-                    const text = await response.text();
-                    alert("❌ Unexpected response: " + text);
+                    alert("⚠️ Scan error: " + result.message);
                 }
             } catch (err) {
                 eventSource.close();
                 progressBar.value = 100;
                 progressText.textContent = "100% Complete";
                 alert("❌ Unexpected error: " + err.message);
+                window.open('/static/scan_report.pdf', '_blank');
             }
         });
     </script>
-    
 </body>
 </html>
