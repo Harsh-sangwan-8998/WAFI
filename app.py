@@ -3,7 +3,6 @@ import webbrowser
 from datetime import datetime
 from urllib.parse import urlparse
 from flask import Flask, request, jsonify, render_template, send_from_directory, Response
-
 from routes.scan_routes import scan_routes
 from scanner.crawler import crawl_website
 from scanner.port_scanner import scan_ports
@@ -112,9 +111,9 @@ def test():
     return "✅ Flask is running successfully!"
 
 if __name__ == '__main__':
-    port = 5001
+    port = int(os.environ.get("PORT", 5000))
     url = f"http://127.0.0.1:{port}/"
     print("\n🚀 Web Scanner is running!")
     print(f"🔗 Open your browser: {url}\n")
     webbrowser.open(url)
-    app.run(debug=False, port=port)
+    app.run(host="0.0.0.0", port=port)
